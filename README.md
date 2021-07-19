@@ -1,0 +1,3 @@
+# Coffee Machine
+
+Decorator pattern
