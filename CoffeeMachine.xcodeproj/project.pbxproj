@@ -13,6 +13,8 @@
 		0A48C82E269046D800D42CB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A48C82C269046D800D42CB0 /* Main.storyboard */; };
 		0A48C830269046D900D42CB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A48C82F269046D900D42CB0 /* Assets.xcassets */; };
 		0A48C833269046D900D42CB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A48C831269046D900D42CB0 /* LaunchScreen.storyboard */; };
+		0A48C83D2690470800D42CB0 /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A48C83C2690470800D42CB0 /* Coffee.swift */; };
+		0A48C84026905D4300D42CB0 /* Observeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A48C83F26905D4300D42CB0 /* Observeable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		0A48C82F269046D900D42CB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A48C832269046D900D42CB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A48C834269046D900D42CB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A48C83C2690470800D42CB0 /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
+		0A48C83F26905D4300D42CB0 /* Observeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observeable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,41 @@
 		0A48C825269046D800D42CB0 /* CoffeeMachine */ = {
 			isa = PBXGroup;
 			children = (
+				0A48C83E26905D3100D42CB0 /* Fundamental */,
+				0A48C83B269046FB00D42CB0 /* Model */,
+				0A48C83A269046E200D42CB0 /* UI */,
 				0A48C826269046D800D42CB0 /* AppDelegate.swift */,
 				0A48C828269046D800D42CB0 /* SceneDelegate.swift */,
-				0A48C82A269046D800D42CB0 /* ViewController.swift */,
-				0A48C82C269046D800D42CB0 /* Main.storyboard */,
 				0A48C82F269046D900D42CB0 /* Assets.xcassets */,
-				0A48C831269046D900D42CB0 /* LaunchScreen.storyboard */,
 				0A48C834269046D900D42CB0 /* Info.plist */,
 			);
 			path = CoffeeMachine;
+			sourceTree = "<group>";
+		};
+		0A48C83A269046E200D42CB0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0A48C82C269046D800D42CB0 /* Main.storyboard */,
+				0A48C831269046D900D42CB0 /* LaunchScreen.storyboard */,
+				0A48C82A269046D800D42CB0 /* ViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		0A48C83B269046FB00D42CB0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0A48C83C2690470800D42CB0 /* Coffee.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0A48C83E26905D3100D42CB0 /* Fundamental */ = {
+			isa = PBXGroup;
+			children = (
+				0A48C83F26905D4300D42CB0 /* Observeable.swift */,
+			);
+			path = Fundamental;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +170,8 @@
 				0A48C82B269046D800D42CB0 /* ViewController.swift in Sources */,
 				0A48C827269046D800D42CB0 /* AppDelegate.swift in Sources */,
 				0A48C829269046D800D42CB0 /* SceneDelegate.swift in Sources */,
+				0A48C84026905D4300D42CB0 /* Observeable.swift in Sources */,
+				0A48C83D2690470800D42CB0 /* Coffee.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

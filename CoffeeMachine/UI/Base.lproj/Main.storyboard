@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoffeeMachine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Zg-Il-wbM">
+                                <rect key="frame" x="157.5" y="810" width="99.5" height="22"/>
+                                <state key="normal" title="Оплатить" image="rublesign.square.fill" catalog="system">
+                                    <color key="titleColor" red="0.0" green="0.45882352939999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="payButtonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gv5-nt-lvy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YoS-3k-Qy6">
+                                <rect key="frame" x="20" y="736" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DWg-pX-0nC">
+                                <rect key="frame" x="10" y="396.5" width="394" height="113"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TQc-M3-6l5">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="32"/>
+                                        <segments>
+                                            <segment title="Без молока"/>
+                                            <segment title="С молоком"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="changingIngredients:" destination="BYZ-38-t0r" eventType="valueChanged" id="7RZ-T9-TwP"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mg5-zi-CYc">
+                                        <rect key="frame" x="0.0" y="41" width="394" height="32"/>
+                                        <segments>
+                                            <segment title="Без сливок"/>
+                                            <segment title="Со сливками"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="changingIngredients:" destination="BYZ-38-t0r" eventType="valueChanged" id="36f-qs-41w"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sqk-qH-5Iw">
+                                        <rect key="frame" x="0.0" y="82" width="394" height="32"/>
+                                        <segments>
+                                            <segment title="Без сахара"/>
+                                            <segment title="Один"/>
+                                            <segment title="Два"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="changingIngredients:" destination="BYZ-38-t0r" eventType="valueChanged" id="glf-VW-H3T"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите ингридиенты" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7U-5h-trf">
+                                <rect key="frame" x="89" y="352.5" width="236" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YoS-3k-Qy6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4Mg-MF-8cn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YoS-3k-Qy6" secondAttribute="trailing" constant="20" id="9tI-F6-3Ub"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2Zg-Il-wbM" secondAttribute="bottom" constant="30" id="CbY-oa-ciR"/>
+                            <constraint firstItem="DWg-pX-0nC" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="DFo-14-HSr"/>
+                            <constraint firstItem="l7U-5h-trf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Rgg-Zq-1Lt"/>
+                            <constraint firstItem="DWg-pX-0nC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="bRB-4l-xfx"/>
+                            <constraint firstItem="DWg-pX-0nC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dnL-W9-P2m"/>
+                            <constraint firstItem="2Zg-Il-wbM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="eMf-0R-Mxm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DWg-pX-0nC" secondAttribute="trailing" constant="10" id="nZc-ol-rVx"/>
+                            <constraint firstItem="2Zg-Il-wbM" firstAttribute="top" secondItem="YoS-3k-Qy6" secondAttribute="bottom" constant="50" id="oeB-3i-GCd"/>
+                            <constraint firstItem="DWg-pX-0nC" firstAttribute="top" secondItem="l7U-5h-trf" secondAttribute="bottom" constant="20" id="wpg-3S-Zom"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="milkControl" destination="TQc-M3-6l5" id="JsZ-ZO-aLq"/>
+                        <outlet property="sugarControl" destination="sqk-qH-5Iw" id="xAD-6W-t6n"/>
+                        <outlet property="totalCostLabel" destination="YoS-3k-Qy6" id="Tx5-xa-kSZ"/>
+                        <outlet property="whipControl" destination="mg5-zi-CYc" id="NRZ-vX-0bh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="107" y="48"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="rublesign.square.fill" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
